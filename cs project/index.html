@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Book</h1>
+    </header>
+    <main>
+        <section id="add-recipe">
+            <h2>Add a Recipe</h2>
+            <form id="recipe-form">
+                <div class="form-group">
+                    <label for="recipe-title">Title:</label>
+                    <input type="text" id="recipe-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-ingredients">Ingredients (comma-separated):</label>
+                    <input type="text" id="recipe-ingredients" name="ingredients" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-instructions">Instructions:</label>
+                    <textarea id="recipe-instructions" name="instructions" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-image">Recipe Image:</label>
+                    <input type="file" id="recipe-image" name="image" accept="image/*" required>
+                </div>
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+
+        <section id="recipe-list">
+            <h2>Your Recipes</h2>
+            <ul id="recipes"></ul>
+        </section>
+    </main>
+
+    <!-- Modal for displaying full recipe details -->
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-recipe-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
